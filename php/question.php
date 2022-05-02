@@ -71,16 +71,16 @@ if (isset($_SESSION['questions'])) {
 
                     if ($type == 1) {
                         //multiple
-                        echo 'input class="form-check-input"  type="checkbox" name"a-' . $a . '" value="' . $IsCorrectAnswer . '" id="i-' . $a . '">';
+                        echo '<input class="form-check-input"  type="checkbox" name"a-' . $a . '" value="' . $IsCorrectAnswer . '" id="i-' . $a . '">';
                     } else {
                         //single
-                        echo 'input class="form-check-input" type="radio" name="a-0" value "' . $IsCorrectAnswer . ' " id=i-' . $a . '">';
+                        echo '<input class="form-check-input" type="radio" name="a-0" value "' . $IsCorrectAnswer . ' " id=i-' . $a . '">';
                     }
 
                     $maxPoints += $IsCorrectAnswer; //same as : $maxPoints = $maxPoints + $isCorrectAnswer;
 
                     echo '<label class="form-check-label" for ="i-' . $a . '">';
-                    echo $answers[$a]['answer'];
+                    echo $answers[$a]['Text'];
                     echo '</label>';
                     echo '</div>';
                 }
