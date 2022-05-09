@@ -2,8 +2,8 @@
 
 
 
-include ('data-collector.php');
-include ('db.php');
+include 'php/data-collector.php';
+include 'php/db.php';
 //include ('header.php');
 
 //Evaluate data in $_POST variable.
@@ -59,7 +59,7 @@ if (isset($_SESSION['questions'])) {
             <h3> Frage <?php echo $currentQuestionIndex; ?> </h3>
             <p><?php echo $questions[$currentQuestionIndex]['Question']; ?></p>
 
-            <form <?php if ($currentQuestionIndex + 1 == count($questions)) echo 'action="php/result.php" '; ?> method="post">
+            <form <?php if ($currentQuestionIndex + 1 == count($questions)) echo 'action="results.php" '; ?> method="post">
                 <?php
                 $answers = $questions[$currentQuestionIndex]['Answers'];
                 $type = $questions[$currentQuestionIndex]['Type'];
